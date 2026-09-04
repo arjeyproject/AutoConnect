@@ -1,2 +1,0 @@
-requests>=2.31.0
-qrcode[pil]>=7.4.2
