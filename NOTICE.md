@@ -1,11 +1,43 @@
-# Third party notices
+# Notices and attribution
 
-AutoConnect is an independent Android client maintained by [@ArJeyDev](https://t.me/ArJeyDev).
+AutoConnect is an independent Android application, designed and maintained by
+[@ArJeyDev](https://t.me/ArJeyDev). It is not affiliated with, endorsed by, or a rebadge of the
+upstream networking projects it links against. Those projects supply the transport; AutoConnect
+supplies the Android application, interface, service lifecycle and updater around them.
 
-The app executes the official Aether Android routing core from https://github.com/CluvexStudio/Aether under GNU AGPL v3.0. The core is not committed; scripts/fetch-native-assets.sh downloads the pinned release and verifies publisher SHA-256 files.
+AutoConnect itself is licensed under the GNU General Public License, version 3.0. See `LICENSE`.
 
-The Android TUN bridge is HEV Socks5 Tunnel from https://github.com/heiher/hev-socks5-tunnel under MIT, built from tag 2.16.0 pinned to commit 0a05221275a51a884d93328c55fc2fbc9e9b6974.
+## Bundled components
 
-AndroidX and Material Components are Apache License 2.0. See third-party/hev-socks5-tunnel-LICENSE.txt and LICENSE.
+### Aether networking core
 
-The AETHER_* environment variables and hev.htproxy JNI contract are upstream contracts and intentionally remain unchanged.
+- Project: <https://github.com/CluvexStudio/Aether>
+- License: GPL-3.0
+- Role: builds the encrypted transport and exposes a local SOCKS5 endpoint. The Android release
+  binaries are downloaded from the project's official releases at build time and verified against
+  the published SHA-256 digests by `scripts/fetch-android-assets.sh`. They are never committed to
+  this repository.
+
+### HEV Socks5 Tunnel
+
+- Project: <https://github.com/heiher/hev-socks5-tunnel>
+- License: see `third-party/hev-socks5-tunnel-LICENSE.txt`
+- Role: bridges the Android `VpnService` file descriptor to the local SOCKS5 endpoint. Built from a
+  pinned source commit with the Android NDK during the build.
+
+### sing-box
+
+- License: see `third-party/sing-box-LICENSE.txt`
+- Retained for completeness of the upstream notice set.
+
+## Source availability
+
+Because AutoConnect and its bundled engines are distributed under GPL-3.0, the complete
+corresponding source is this repository plus the upstream projects listed above. Anyone receiving a
+binary is entitled to that source under the same license.
+
+## Trademarks
+
+Names and marks of the upstream projects belong to their respective owners and are used here only
+to identify the components in use, as required by their licenses. "AutoConnect" refers to this
+application only.
