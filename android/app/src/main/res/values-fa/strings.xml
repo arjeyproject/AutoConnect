@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- هویت -->
+    <string name="app_name">اتوکانکت</string>
+    <string name="app_tagline">امن، سریع، همیشه رایگان</string>
+
+    <!-- ناوبری -->
+    <string name="nav_connect">اتصال</string>
+    <string name="nav_configurations">تانل</string>
+    <string name="nav_settings">تنطیمات</string>
+    <string name="nav_about">درباره</string>
+    <string name="open_navigation">باز کردن منو</string>
+    <string name="close_navigation">بستن منو</string>
+    <string name="configurations_title">تانل</string>
+    <string name="configurations_summary">انتخاب کنید اتوکانکت چطور تانل شما را بسازد.</string>
+    <string name="settings_title">تنطیمات</string>
+    <string name="settings_summary">ظاهر، زبان، اعلان‌ها و بروزرسانی‌ها.</string>
+
+    <!-- خانه -->
+    <string name="connect">اتصال</string>
+    <string name="disconnect">قطع اتصال</string>
+    <string name="connecting">در حال اتصال</string>
+    <string name="disconnecting">در حال قطع</string>
+    <string name="status_disconnected">آماده اتصال</string>
+    <string name="status_connected">محافطت‌شده</string>
+    <string name="status_connecting">در حال ساخت تانل…</string>
+    <string name="status_disconnecting">در حال بستن تانل…</string>
+    <string name="tap_to_secure">برای اتصال لمس کنید</string>
+    <string name="status_ready_message"></string>
+    <string name="status_protected">ترافیک شما رمزنگاری شده است</string>
+    <string name="status_starting">اتوکانکت در حال شروع است</string>
+    <string name="status_scanning">در حال یافتن دروازه</string>
+    <string name="status_securing">در حال ایمن‌سازی مسیر</string>
+    <string name="status_reconnecting">در حال اتصال دوباره</string>
+    <string name="status_blocked">ترافیک مسدود است</string>
+    <string name="status_error">اتصال به بررسی نیاز دارد</string>
+    <string name="connection_location_unavailable">متصل نیست</string>
+    <string name="location_detecting">در حال یافتن دروازه…</string>
+    <string name="metric_unavailable">—</string>
+    <string name="session_label">این نشست</string>
+    <string name="latency_label">تأخیر</string>
+    <string name="node_label">دروازه</string>
+    <string name="upload_label">ارسال</string>
+    <string name="download_label">دریافت</string>
+    <string name="ping_label">پینگ</string>
+    <string name="ping_millis">%1$s میلی‌ثانیه</string>
+    <string name="upload_traffic">ارسال %1$s</string>
+    <string name="download_traffic">دریافت %1$s</string>
+    <string name="home_free_note">رایگان برای همه. بدون حساب کاربری، بدون تبلیغ، بدون محدودیت.</string>
+
+    <!-- تانل -->
+    <string name="connection_mode">حالت اتصال</string>
+    <string name="vpn_mode">وی‌پی‌ان دستگاه</string>
+    <string name="proxy_mode">سوکس۵</string>
+    <string name="smart_mode">هوشمند</string>
+    <string name="smart_mode_summary">همه پروتکل‌ها آزمایش می‌شوند و سریع‌ترین مسیر پایدار انتخاب می‌شود.</string>
+    <string name="vpn_mode_summary">تمام ترافیک دستگاه از تانل عبور می‌کند.</string>
+    <string name="proxy_mode_summary">اجرای پروکسی محلی SOCKS5 بدون وی‌پی‌ان سیستمی.</string>
+    <string name="protocol">پروتکل</string>
+    <string name="scan_mode">حالت اسکن</string>
+    <string name="transport">ترنسپورت MASQUE</string>
+    <string name="advanced_settings">پیشرفته</string>
+    <string name="show_advanced">نمایش تنطیمات پیشرفته</string>
+    <string name="hide_advanced">بستن تنطیمات پیشرفته</string>
+    <string name="ip_scan">اسکن آی‌پی</string>
+    <string name="obfuscation">مبهم‌سازی</string>
+    <string name="log_level">سطح گزارش</string>
+    <string name="socks_address">آدرس محلی SOCKS5</string>
+    <string name="custom_endpoint">اندپوینت دلخواه (اختیاری)</string>
+    <string name="mtu">MTU تانل</string>
+    <string name="dns_protection">مسیردهی خصوصی DNS</string>
+    <string name="dns_protection_summary">درخواست‌های DNS از داخل تانل عبور کنند</string>
+    <string name="kill_switch">قطع کامل در خطا</string>
+    <string name="kill_switch_summary">اگر تانل ناگهانی قطع شد، شبکه مسدود بماند</string>
+    <string name="quick_reconnect">اتصال خودکار دوباره</string>
+    <string name="quick_reconnect_summary">بازیابی خودکار پس از قطعی موقت</string>
+    <string name="reset_defaults">بازگشت به پیش‌فرض</string>
+
+    <!-- تانل تفکیکی -->
+    <string name="split_tunneling">تانل تفکیکی</string>
+    <string name="split_tunneling_summary">انتخاب کنید کدام برنامه‌ها از اتوکانکت استفاده کنند.</string>
+    <string name="routing_mode">حالت مسیردهی</string>
+    <string name="split_include">فقط این برنامه‌ها</string>
+    <string name="split_include_summary">تنها برنامه‌های انتخاب‌شده از تانل استفاده می‌کنند</string>
+    <string name="split_exclude">جز این برنامه‌ها</string>
+    <string name="split_exclude_summary">برنامه‌های انتخاب‌شده از تانل عبور نمی‌کنند</string>
+    <string name="selected_apps">برنامه‌های انتخاب‌شده</string>
+    <string name="choose_apps">انتخاب برنامه‌ها</string>
+    <string name="choose_apps_summary">تغییرات در اتصال بعدی اعمال می‌شود.</string>
+    <string name="split_include_empty">برای حالت «فقط این برنامه‌ها» حداقل یک برنامه انتخاب کنید.</string>
+    <string name="app_picker_title">انتخاب برنامه‌ها</string>
+    <string name="app_picker_search">جستجوی برنامه</string>
+    <string name="app_picker_empty">برنامه‌ای با این جستجو پیدا نشد</string>
+    <string name="app_picker_missing">این برنامه نصب نیست</string>
+    <string name="app_picker_done">اعمال</string>
+    <string name="select_all">انتخاب همه</string>
+    <string name="clear_all">پاک کردن همه</string>
+    <plurals name="app_picker_selected_count"><item quantity="one">%1$d برنامه انتخاب شده</item><item quantity="other">%1$d برنامه انتخاب شده</item></plurals>
+
+    <!-- تنطیمات -->
+    <string name="appearance">ظاهر</string>
+    <string name="appearance_summary">تم و زبان بی‌درنگ اعمال می‌شوند.</string>
+    <string name="theme">تم</string>
+    <string name="language">زبان</string>
+    <string name="notifications">اعلان‌ها</string>
+    <string name="notifications_summary">مدیریت اعلان‌های تانل و بروزرسانی</string>
+    <string name="manage_notifications">باز کردن تنطیمات اعلان</string>
+    <string name="quick_settings">کلید دسترسی سریع</string>
+    <string name="quick_settings_summary">اتصال و قطع اتصال از نوار اعلان‌ها</string>
+    <string name="add_quick_settings_tile">افزودن کلید اتوکانکت</string>
+    <string name="tile_add_requested">درخواست افزودن کلید باز شد.</string>
+    <string name="tile_add_manual">حالت ویرایش دسترسی سریع را باز کنید و اتوکانکت را اضافه کنید.</string>
+
+    <!-- درباره و حمایت -->
+    <string name="about">درباره</string>
+    <string name="about_summary">اتوکانکت برای اندروید</string>
+    <string name="developer_title">سازنده و پشتیبانی</string>
+    <string name="developer_summary">پشتیبانی مستقیم از @ArJeyDev در تلگرام</string>
+    <string name="telegram_title">کانال اتوکانکت</string>
+    <string name="telegram_summary">نسخه‌های جدید، نکته‌ها و خبرها در @ArJeyProject</string>
+    <string name="open_channel">باز کردن کانال</string>
+    <string name="menu_telegram">تلگرام</string>
+    <string name="application_project">اپلیکیشن</string>
+    <string name="app_credit">اتوکانکت یک کلاینت مستقل اندروید است که توسط @ArJeyDev طراحی و ساخته شده است. همیشه و برای همه رایگان.</string>
+    <string name="original_project">موتور شبکه</string>
+    <string name="aether_credit">ترافیک توسط هسته متن‌باز Aether و پل HEV Socks5 Tunnel با مجوز GPL-3.0 منتقل می‌شود.</string>
+    <string name="licenses_title">مجوزها</string>
+    <string name="licenses_summary">اتوکانکت با مجوز GPL-3.0 منتشر می‌شود. موتورهای همراه، مجوز خودشان را دارند که در بسته برنامه قرار دارد.</string>
+
+    <string name="donate_title">حمایت و اهدا</string>
+    <string name="donate_summary">اتوکانکت رایگان می‌ماند. اگر برایتان مفید بود، حمایت شما سرورها و نسخه‌های بعدی را زنده نگه می‌دارد. برای کپی، روی آدرس بزنید.</string>
+    <string name="address_copied">آدرس کپی شد</string>
+    <string name="copy_address">کپی آدرس</string>
+
+    <!-- کلید و سرویس -->
+    <string name="tile_name">اتوکانکت</string>
+    <string name="tile_connected">محافطت‌شده</string>
+    <string name="tile_disconnected">خاموش</string>
+    <string name="tile_unavailable">در دسترس نیست</string>
+    <string name="notification_channel">تانل اتوکانکت</string>
+    <string name="notification_channel_summary">وضعیت اتصال تانل</string>
+    <string name="service_preparing">در حال آماده‌سازی اتصال امن</string>
+    <string name="service_launching">در حال اجرای هسته شبکه</string>
+    <string name="service_disconnecting">در حال بستن ایمن تانل</string>
+    <string name="service_disconnected">اتصال ایمن قطع شد</string>
+    <string name="service_smart_testing">آزمایش MASQUE، WireGuard و WARP-in-WARP</string>
+    <string name="service_scanning">در حال جستجوی دروازه معتبر</string>
+    <string name="service_proxy_ready">پروکسی محلی SOCKS5 آماده است</string>
+    <string name="service_proxy_connected">پروکسی SOCKS5 متصل شد</string>
+    <string name="service_protected">ترافیک دستگاه شما محافطت می‌شود</string>
+    <string name="service_smart_protected">محافطت‌شده با حالت هوشمند</string>
+    <string name="service_app_protected">محافطت‌شده از طریق اتوکانکت</string>
+    <string name="service_blocked">تانل متوقف شد؛ شبکه در حالت قطع کامل مسدود می‌ماند</string>
+    <string name="service_blocked_notification">ترافیک مسدود است — اتصال دوباره یا قطع کنید</string>
+    <string name="service_identity_ready">شناسه آماده است؛ در حال یافتن بهترین دروازه</string>
+    <string name="service_testing_gateways">در حال آزمایش دروازه‌های در دسترس</string>
+    <string name="service_gateway_verified">دروازه تأیید شد؛ در حال ایمن‌سازی تانل</string>
+    <string name="service_reconnecting">اتصال قطع شد؛ در حال بازیابی آخرین مسیر تأییدشده</string>
+    <string name="service_restored">اتصال بازیابی شد</string>
+    <string name="service_testing_protocol">آزمایش %1$s (%2$d/%3$d)</string>
+    <string name="service_reconnect_failed">اتوکانکت پس از %1$d تلاش نتوانست اتصال را بازیابی کند</string>
+    <string name="service_network_lost">شبکه در دسترس نیست؛ در انتطار اتصال دوباره</string>
+    <string name="service_network_restored">شبکه تغییر کرد؛ در حال بازیابی مسیر امن</string>
+    <string name="service_tunnel_unresponsive">بررسی سلامت تانل ناموفق بود؛ در حال اتصال دوباره</string>
+
+    <!-- اعتبارسنجی -->
+    <string name="invalid_socks">یک آدرس معتبر به شکل host:port وارد کنید، مثلاً 127.0.0.1:1819.</string>
+    <string name="vpn_permission_denied">برای حالت وی‌پی‌ان دستگاه، اجازه وی‌پی‌ان اندروید لازم است.</string>
+    <string name="telegram_fallback">تلگرام: @ArJeyProject</string>
+
+    <!-- بروزرسانی -->
+    <string name="app_updates">بروزرسانی برنامه</string>
+    <string name="current_version">نسخه نصب‌شده</string>
+    <string name="latest_version">آخرین نسخه</string>
+    <string name="not_checked">هنوز بررسی نشده</string>
+    <string name="update_status">وضعیت</string>
+    <string name="update_up_to_date">بروز است</string>
+    <string name="update_available">بروزرسانی موجود است</string>
+    <string name="update_downloading">در حال دانلود…</string>
+    <string name="update_installing">در حال نصب…</string>
+    <string name="update_checking">در حال بررسی…</string>
+    <string name="update_failed">بررسی بروزرسانی ناموفق بود</string>
+    <string name="update_download_failed">دانلود ناموفق بود</string>
+    <string name="update_verification_failed">تأیید فایل ناموفق بود</string>
+    <string name="update_ready_install">تأیید شد و آماده نصب است</string>
+    <string name="check_for_updates">بررسی کن</string>
+    <string name="download_update">دانلود بروزرسانی</string>
+    <string name="automatic_updates">بروزرسانی خودکار</string>
+    <string name="automatic_updates_summary">بررسی و دانلود بروزرسانی‌های تأییدشده در پس‌زمینه</string>
+    <string name="release_notes">توضیحات نسخه</string>
+    <string name="no_release_notes">توضیحاتی برای این نسخه ثبت نشده است.</string>
+    <string name="new_update_title">نسخه جدید اتوکانکت منتشر شد</string>
+    <string name="new_update_versions">نصب‌شده %1$s • موجود %2$s</string>
+    <string name="start_update">شروع بروزرسانی</string>
+    <string name="install_update">نصب بروزرسانی</string>
+    <string name="update_notification_channel">بروزرسانی برنامه</string>
+    <string name="update_notification_channel_summary">اعلام موجود بودن و نصب بروزرسانی</string>
+    <string name="install_permission_required">به اتوکانکت اجازه نصب بروزرسانی بدهید و دوباره تلاش کنید.</string>
+    <string name="update_download_started">دانلود شروع شد.</string>
+    <string name="update_no_download">بروزرسانی تأییدشده‌ای برای نصب آماده نیست.</string>
+</resources>

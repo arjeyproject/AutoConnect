@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Identity -->
+    <string name="app_name">AutoConnect</string>
+    <string name="app_tagline">Private, fast, free forever</string>
+    <string name="app_version" translatable="false">v1.0.0</string>
+    <string name="version_format" translatable="false">v%1$s</string>
+    <string name="channel_url" translatable="false">https://t.me/ArJeyProject</string>
+    <string name="developer_url" translatable="false">https://t.me/ArJeyDev</string>
+    <string name="developer_handle" translatable="false">@ArJeyDev</string>
+    <string name="channel_handle" translatable="false">@ArJeyProject</string>
+    <string name="default_socks_address" translatable="false">127.0.0.1:1819</string>
+    <string name="default_mtu" translatable="false">1500</string>
+
+    <!-- Navigation -->
+    <string name="nav_connect">Connect</string>
+    <string name="nav_configurations">Tunnel</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about">About</string>
+    <string name="open_navigation">Open menu</string>
+    <string name="close_navigation">Close menu</string>
+    <string name="configurations_title">Tunnel</string>
+    <string name="configurations_summary">Pick how AutoConnect builds your tunnel.</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_summary">Appearance, language, notifications and updates.</string>
+
+    <!-- Home -->
+    <string name="connect">CONNECT</string>
+    <string name="disconnect">DISCONNECT</string>
+    <string name="connecting">CONNECTING</string>
+    <string name="disconnecting">STOPPING</string>
+    <string name="status_disconnected">Ready to connect</string>
+    <string name="status_connected">Protected</string>
+    <string name="status_connecting">Building the tunnel…</string>
+    <string name="status_disconnecting">Closing the tunnel…</string>
+    <string name="tap_to_secure">tap to secure</string>
+    <string name="status_ready_message"></string>
+    <string name="status_protected">Your traffic is encrypted</string>
+    <string name="status_starting">Starting AutoConnect</string>
+    <string name="status_scanning">Finding a gateway</string>
+    <string name="status_securing">Securing your route</string>
+    <string name="status_reconnecting">Reconnecting</string>
+    <string name="status_blocked">Traffic is blocked</string>
+    <string name="status_error">Connection needs attention</string>
+    <string name="connection_location_unavailable">Not connected</string>
+    <string name="location_detecting">Finding gateway…</string>
+    <string name="metric_unavailable">—</string>
+    <string name="session_label">Session</string>
+    <string name="latency_label">Latency</string>
+    <string name="node_label">Gateway</string>
+    <string name="upload_label">Upload</string>
+    <string name="download_label">Download</string>
+    <string name="ping_label">Ping</string>
+    <string name="ping_value" translatable="false">%1$s</string>
+    <string name="ping_millis">%1$s ms</string>
+    <string name="upload_traffic">Upload %1$s</string>
+    <string name="download_traffic">Download %1$s</string>
+    <string name="traffic_kilobytes" translatable="false">%1$.1f KB</string>
+    <string name="traffic_megabytes" translatable="false">%1$.1f MB</string>
+    <string name="traffic_gigabytes" translatable="false">%1$.1f GB</string>
+    <string name="home_free_note">Free for everyone. No account, no ads, no limits.</string>
+
+    <!-- Tunnel -->
+    <string name="connection_mode">Connection mode</string>
+    <string name="vpn_mode">Device VPN</string>
+    <string name="proxy_mode">SOCKS5</string>
+    <string name="smart_mode">Smart</string>
+    <string name="smart_mode_summary">Test every protocol and keep the fastest reliable route.</string>
+    <string name="vpn_mode_summary">Route the whole device through the tunnel.</string>
+    <string name="proxy_mode_summary">Run a local SOCKS5 proxy without a system VPN.</string>
+    <string name="protocol">Protocol</string>
+    <string name="scan_mode">Scan mode</string>
+    <string name="transport">MASQUE transport</string>
+    <string name="advanced_settings">Advanced</string>
+    <string name="show_advanced">Show advanced</string>
+    <string name="hide_advanced">Hide advanced</string>
+    <string name="ip_scan">IP scan</string>
+    <string name="obfuscation">Obfuscation</string>
+    <string name="log_level">Log level</string>
+    <string name="socks_address">Local SOCKS5 address</string>
+    <string name="custom_endpoint">Custom endpoint (optional)</string>
+    <string name="mtu">Tunnel MTU</string>
+    <string name="dns_protection">Private DNS routing</string>
+    <string name="dns_protection_summary">Send DNS queries through the tunnel</string>
+    <string name="kill_switch">Fail closed</string>
+    <string name="kill_switch_summary">Keep the network blocked if the tunnel stops unexpectedly</string>
+    <string name="quick_reconnect">Auto reconnect</string>
+    <string name="quick_reconnect_summary">Recover automatically after a temporary failure</string>
+    <string name="reset_defaults">Reset to defaults</string>
+
+    <!-- Split tunneling -->
+    <string name="split_tunneling">Split tunneling</string>
+    <string name="split_tunneling_summary">Choose which apps use AutoConnect.</string>
+    <string name="routing_mode">Routing mode</string>
+    <string name="split_include">Include apps</string>
+    <string name="split_include_summary">Only the selected apps use the tunnel</string>
+    <string name="split_exclude">Exclude apps</string>
+    <string name="split_exclude_summary">The selected apps bypass the tunnel</string>
+    <string name="selected_apps">Selected apps</string>
+    <string name="choose_apps">Select apps</string>
+    <string name="choose_apps_summary">Changes apply the next time you connect.</string>
+    <string name="split_include_empty">Select at least one app for include-only routing.</string>
+    <string name="app_picker_title">Select apps</string>
+    <string name="app_picker_search">Search apps</string>
+    <string name="app_picker_empty">No apps match your search</string>
+    <string name="app_picker_missing">App no longer installed</string>
+    <string name="app_picker_done">Apply</string>
+    <string name="select_all">Select all</string>
+    <string name="clear_all">Clear all</string>
+    <plurals name="app_picker_selected_count"><item quantity="one">%1$d app selected</item><item quantity="other">%1$d apps selected</item></plurals>
+
+    <!-- Settings -->
+    <string name="appearance">Appearance</string>
+    <string name="appearance_summary">Theme and language apply instantly.</string>
+    <string name="theme">Theme</string>
+    <string name="language">Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_summary">Control tunnel and update alerts</string>
+    <string name="manage_notifications">Open notification settings</string>
+    <string name="quick_settings">Quick Settings tile</string>
+    <string name="quick_settings_summary">Connect and disconnect from the notification shade</string>
+    <string name="add_quick_settings_tile">Add the AutoConnect tile</string>
+    <string name="tile_add_requested">Tile request opened.</string>
+    <string name="tile_add_manual">Open Quick Settings edit mode and add AutoConnect.</string>
+
+    <!-- About + support -->
+    <string name="about">About</string>
+    <string name="about_summary">AutoConnect for Android</string>
+    <string name="developer_title">Developer &amp; support</string>
+    <string name="developer_summary">Direct support from @ArJeyDev on Telegram</string>
+    <string name="telegram_title">AutoConnect channel</string>
+    <string name="telegram_summary">Releases, tips and news at @ArJeyProject</string>
+    <string name="open_channel">Open channel</string>
+    <string name="menu_telegram">Telegram</string>
+    <string name="application_project">Application</string>
+    <string name="app_credit">AutoConnect is an independent Android client, designed and built by @ArJeyDev. Free for everyone, forever.</string>
+    <string name="app_repository" translatable="false">https://github.com/arjeyproject/AutoConnect</string>
+    <string name="original_project">Networking engine</string>
+    <string name="aether_credit">Traffic is carried by the open-source Aether core and the HEV Socks5 Tunnel bridge, licensed under GPL-3.0.</string>
+    <string name="aether_repository" translatable="false">https://github.com/CluvexStudio/Aether</string>
+    <string name="licenses_title">Licenses</string>
+    <string name="licenses_summary">AutoConnect is released under GPL-3.0. Bundled engines keep their own licenses, included in the app package.</string>
+
+    <string name="donate_title">Support &amp; donate</string>
+    <string name="donate_summary">AutoConnect stays free. If it helps you, a donation keeps the servers and releases coming. Tap an address to copy it.</string>
+    <string name="donate_btc_label" translatable="false">Bitcoin (BTC)</string>
+    <string name="donate_btc_value" translatable="false">bc1qcskpuht93n25955qlkz3clh27tfa5njcg6k5t7</string>
+    <string name="donate_usdt_label" translatable="false">Tether USDT (TRC20)</string>
+    <string name="donate_usdt_value" translatable="false">TQ3FbpDYiKxf8aZtKuxBiWaj9N7LQnQY4F</string>
+    <string name="donate_ton_label" translatable="false">TON (Gram)</string>
+    <string name="donate_ton_value" translatable="false">UQBMAeTrxdEP85mIvOPZoa0_xcJfOEvA0apODFARMHU2A8oq</string>
+    <string name="address_copied">Address copied</string>
+    <string name="copy_address">Copy address</string>
+
+    <!-- Tile + service -->
+    <string name="tile_name">AutoConnect</string>
+    <string name="tile_connected">Protected</string>
+    <string name="tile_disconnected">Off</string>
+    <string name="tile_unavailable">Unavailable</string>
+    <string name="notification_channel">AutoConnect tunnel</string>
+    <string name="notification_channel_summary">Tunnel connection status</string>
+    <string name="service_preparing">Preparing a secure connection</string>
+    <string name="service_launching">Launching the network core</string>
+    <string name="service_disconnecting">Closing the tunnel safely</string>
+    <string name="service_disconnected">Disconnected safely</string>
+    <string name="service_smart_testing">Testing MASQUE, WireGuard and WARP-in-WARP</string>
+    <string name="service_scanning">Scanning for a verified gateway</string>
+    <string name="service_proxy_ready">Local SOCKS5 proxy is ready</string>
+    <string name="service_proxy_connected">SOCKS5 proxy is connected</string>
+    <string name="service_protected">Your device traffic is protected</string>
+    <string name="service_smart_protected">Protected with Smart mode</string>
+    <string name="service_app_protected">Protected through AutoConnect</string>
+    <string name="service_blocked">Tunnel stopped; the network stays blocked by fail-closed mode</string>
+    <string name="service_blocked_notification">Traffic blocked — reconnect or disconnect</string>
+    <string name="service_identity_ready">Identity ready; finding the best gateway</string>
+    <string name="service_testing_gateways">Testing reachable gateways</string>
+    <string name="service_gateway_verified">Gateway verified; securing the tunnel</string>
+    <string name="service_reconnecting">Connection lost; restoring the last verified route</string>
+    <string name="service_restored">Connection restored</string>
+    <string name="service_testing_protocol">Testing %1$s (%2$d/%3$d)</string>
+    <string name="service_reconnect_failed">AutoConnect could not recover after %1$d attempts</string>
+    <string name="service_network_lost">Network unavailable; waiting to reconnect</string>
+    <string name="service_network_restored">Network changed; restoring the secure route</string>
+    <string name="service_tunnel_unresponsive">Tunnel health check failed; reconnecting</string>
+
+    <!-- Validation -->
+    <string name="invalid_socks">Enter a valid host:port address, for example 127.0.0.1:1819.</string>
+    <string name="vpn_permission_denied">Android VPN permission is required for Device VPN mode.</string>
+    <string name="telegram_fallback">Telegram: @ArJeyProject</string>
+
+    <!-- Updates -->
+    <string name="app_updates">App updates</string>
+    <string name="current_version">Installed version</string>
+    <string name="latest_version">Latest version</string>
+    <string name="not_checked">Not checked yet</string>
+    <string name="update_status">Status</string>
+    <string name="update_up_to_date">Up to date</string>
+    <string name="update_available">Update available</string>
+    <string name="update_downloading">Downloading…</string>
+    <string name="update_installing">Installing…</string>
+    <string name="update_checking">Checking…</string>
+    <string name="update_failed">Update check failed</string>
+    <string name="update_download_failed">Download failed</string>
+    <string name="update_verification_failed">Verification failed</string>
+    <string name="update_ready_install">Verified and ready to install</string>
+    <string name="check_for_updates">Check now</string>
+    <string name="download_update">Download update</string>
+    <string name="automatic_updates">Automatic updates</string>
+    <string name="automatic_updates_summary">Check and download verified updates in the background</string>
+    <string name="release_notes">Release notes</string>
+    <string name="no_release_notes">No release notes available.</string>
+    <string name="new_update_title">A new AutoConnect version is available</string>
+    <string name="new_update_versions">Installed %1$s • Available %2$s</string>
+    <string name="start_update">Start update</string>
+    <string name="install_update">Install update</string>
+    <string name="update_notification_channel">App updates</string>
+    <string name="update_notification_channel_summary">Update availability and installation</string>
+    <string name="install_permission_required">Allow AutoConnect to install updates, then try again.</string>
+    <string name="update_download_started">Download started.</string>
+    <string name="update_no_download">No verified update is ready to install.</string>
+</resources>
