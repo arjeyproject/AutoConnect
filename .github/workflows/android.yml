@@ -16,26 +16,56 @@ jobs:
       - uses: actions/setup-java@v4
         with: { distribution: temurin, java-version: '17' }
       - uses: gradle/actions/setup-gradle@v4
+        with: { gradle-version: '8.10.2' }
+
       - name: Install Android SDK and NDK
         run: |
           SDKMANAGER="$(find "$ANDROID_SDK_ROOT/cmdline-tools" -name sdkmanager -type f | head -n1)"
           yes | "$SDKMANAGER" --licenses || true
           "$SDKMANAGER" 'platforms;android-35' 'build-tools;35.0.0' 'ndk;27.2.12479018'
+
       - name: Fetch verified native assets
-        run: ./scripts/fetch-native-assets.sh
+        run: bash scripts/fetch-android-assets.sh
+        env:
+          ANDROID_NDK_HOME: ${{ env.ANDROID_SDK_ROOT }}/ndk/27.2.12479018
+
       - name: Test and lint
+        working-directory: android
         run: gradle --no-daemon testDebugUnitTest lintDebug
+
       - name: Debug build
         if: github.event_name == 'pull_request'
+        working-directory: android
         run: gradle --no-daemon assembleDebug
-      - name: Signed release
+
+      - name: Decode release keystore
         if: ${{ github.event_name != 'pull_request' && secrets.ANDROID_KEYSTORE_BASE64 != '' }}
-        run: ./scripts/package-release.sh
+        run: |
+          mkdir -p android/.android-signing
+          echo "${{ secrets.ANDROID_KEYSTORE_BASE64 }}" | base64 -d > android/.android-signing/autoconnect.jks
+
+      - name: Release build
+        if: github.event_name != 'pull_request'
+        working-directory: android
+        env:
+          ANDROID_KEYSTORE_PATH: .android-signing/autoconnect.jks
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: gradle --no-daemon assembleRelease bundleRelease
+
+      - name: Checksums
+        if: github.event_name != 'pull_request'
+        run: |
+          cd android/app/build/outputs/apk/release
+          sha256sum *.apk | tee SHA256SUMS.txt
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: autoconnect-build
           path: |
-            release/
-            app/build/outputs/apk/**/*.apk
+            android/app/build/outputs/apk/**/*.apk
+            android/app/build/outputs/bundle/**/*.aab
+            android/app/build/outputs/apk/release/SHA256SUMS.txt
           if-no-files-found: ignore

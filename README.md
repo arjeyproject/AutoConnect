@@ -47,7 +47,7 @@ Android 8.0 or newer is required. Verify the download against `SHA256SUMS.txt` o
 
 ## Build it yourself
 
-**Full step by step guide, in English and Persian: [`docs/install-guide.html`](docs/install-guide.html)**
+**Full step by step guide, in English and Persian: [`docs/index.html`](docs/index.html)**
 (open it in any browser).
 
 Short version, on Ubuntu 22.04 or 24.04:
@@ -68,7 +68,7 @@ Output lands in `android/app/build/outputs/`. Without a keystore the release bui
 debug key so that a fresh clone still produces an installable APK. For anything you publish, create
 a real keystore, keep it forever, and never commit it.
 
-Prefer no server at all? Push to GitHub and run the **Build AutoConnect for Android** workflow. It
+Prefer no server at all? Push to GitHub and run the **Android** workflow. It
 does everything above on a free runner and attaches the APKs to the run.
 
 ## Project layout
@@ -79,7 +79,7 @@ android/                  the Android application
   app/src/main/res/       design tokens, layouts, English and Persian strings
 scripts/
   fetch-android-assets.sh downloads and verifies the network cores, builds the JNI bridge
-docs/install-guide.html   bilingual build and install guide
+docs/index.html           bilingual build and install guide
 .github/workflows/        CI that builds, signs and publishes releases
 ```
 
