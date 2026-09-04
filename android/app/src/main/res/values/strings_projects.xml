@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Our other project, shown in the About tab as a plain Telegram link.
+  AutoConnect is fully independent: it never contacts the bot and needs nothing from it.
+-->
+<resources>
+    <string name="bot_handle" translatable="false">@AutoVlessBot</string>
+    <string name="bot_url" translatable="false">https://t.me/AutoVlessBot</string>
+    <string name="bot_title">AutoVless bot</string>
+    <string name="bot_summary">Another project of ours on Telegram. AutoConnect runs entirely on its own.</string>
+</resources>
