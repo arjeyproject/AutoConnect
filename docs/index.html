@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AutoConnect Ubuntu Guide</title><style>body{max-width:920px;margin:auto;padding:32px;background:#100d0b;color:#f4eee8;font:16px/1.6 system-ui}a{color:#ff7a45}pre{background:#211a16;padding:16px;border-radius:12px;overflow:auto}section{border-bottom:1px solid #382d26;padding:28px 0}h1{font-size:clamp(42px,8vw,76px);line-height:1}h2{color:#ff7a45}.fa{direction:rtl;text-align:right;display:none}.note{border:1px solid #6d4f20;border-radius:12px;padding:16px}</style></head><body><nav><a href="#install">Install</a> · <a href="#build">Build</a> · <a href="#server">Server</a> · <a href="https://t.me/ArJeyProject">Telegram</a></nav><main><section><small>ANDROID CLIENT · V1.0.0</small><h1>AutoConnect</h1><p>Private routing, one tap away.</p><p>This guide covers Ubuntu setup, native asset verification, signed APK builds and server compatibility.</p></section><section id="install"><h2>1. Prepare Ubuntu</h2><pre>sudo apt update
+sudo apt install -y git curl unzip tar build-essential libssl-dev pkg-config openjdk-17-jdk
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools:$PATH"
+yes | sdkmanager --licenses
+sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0" "ndk;27.2.12479018"
+export ANDROID_NDK_HOME="$ANDROID_SDK_ROOT/ndk/27.2.12479018"</pre></section><section id="build"><h2>2. Clone and build</h2><pre>git clone https://github.com/arjeyproject/AutoConnect.git
+cd AutoConnect
+./scripts/fetch-native-assets.sh
+gradle --no-daemon testDebugUnitTest lintDebug assembleDebug</pre><p>The fetch script downloads Aether for ARMv7, ARM64 and x86_64, verifies upstream SHA-256 files, clones HEV at a pinned commit and compiles the JNI bridge. A mismatch stops the build.</p><h3>Release</h3><pre>export ANDROID_KEYSTORE_PATH=.signing/autoconnect.jks
+export ANDROID_KEYSTORE_PASSWORD='secret'
+export ANDROID_KEY_ALIAS=autoconnect
+export ANDROID_KEY_PASSWORD='secret'
+./scripts/package-release.sh</pre></section><section id="server"><h2>3. Server compatibility</h2><div class="note"><strong>Important:</strong> AutoConnect currently speaks MASQUE, WireGuard and Gool through the Aether core. Custom endpoint is not a generic VLESS/Reality or arbitrary sing-box JSON parser. A sing-box or Xray server is separate, not a direct AutoConnect backend.</div><p>For compatible clients, install sing-box on Ubuntu:</p><pre>sudo apt update && sudo apt install -y curl unzip
+bash &lt;(curl -fsSL https://sing-box.app/deb-install.sh)
+sudo install -d -m 0750 /etc/sing-box
+sudo nano /etc/sing-box/config.json
+sudo systemctl enable --now sing-box
+sudo systemctl status sing-box --no-pager</pre><p>Use official documentation for the inbound, TLS certificate, firewall and compatible client profile. Do not expose a management port.</p></section><section id="connect"><h2>4. Connect Android</h2><ol><li>Install Universal or the matching ABI APK.</li><li>Choose Device VPN and approve Android's VPN prompt.</li><li>Start with Gool and Turbo.</li><li>Tap the aperture and inspect Activity for gateway tests.</li><li>Use Smart to benchmark all three protocols.</li></ol><p>SOCKS5 mode exposes <code>127.0.0.1:1819</code>.</p></section><section><h2>Support</h2><p><a href="https://t.me/ArJeyDev">@ArJeyDev</a> · <a href="https://t.me/ArJeyProject">@ArJeyProject</a></p><h2>فارسی</h2><p class="fa" style="display:block">راهنما شامل نصب پیش‌نیازها، دریافت هسته واقعی با بررسی چک‌سام، ساخت APK امضاشده و راه‌اندازی جداگانه sing-box است. کلاینت فعلی AutoConnect پروتکل‌های MASQUE، WireGuard و Gool را می‌فهمد و مفسر عمومی VLESS/Reality نیست. برای پشتیبانی: <a href="https://t.me/ArJeyDev">@ArJeyDev</a> و <a href="https://t.me/ArJeyProject">@ArJeyProject</a></p></section></main></body></html>
