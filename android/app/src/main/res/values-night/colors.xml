@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AutoConnect design tokens - Dark appearance. Deep, low-glare surfaces with real elevation steps. -->
+<resources>
+    <!-- Canvas -->
+    <color name="background">#06080C</color>
+    <color name="background_deep">#03050A</color>
+    <color name="surface">#0F1319</color>
+    <color name="surface_alt">#141922</color>
+    <color name="surface_elevated">#1A2029</color>
+    <color name="glass">#14FFFFFF</color>
+    <color name="glass_stroke">#1F2632</color>
+
+    <!-- Type -->
+    <color name="text">#EDF2F8</color>
+    <color name="text_secondary">#AFBACA</color>
+    <color name="muted">#7A8698</color>
+    <color name="border">#212836</color>
+    <color name="divider">#171D27</color>
+
+    <!-- Brand -->
+    <color name="brand">#00E39F</color>
+    <color name="brand_strong">#00B682</color>
+    <color name="brand_soft">#0B2B23</color>
+    <color name="accent">#8492FF</color>
+    <color name="accent_soft">#161C33</color>
+
+    <!-- Semantic -->
+    <color name="success">#00E39F</color>
+    <color name="warning">#FFC15E</color>
+    <color name="error">#FF6B7C</color>
+    <color name="info">#5FA8FF</color>
+    <color name="on_brand">#04120D</color>
+
+    <!-- Connection orb states -->
+    <color name="orb_idle_start">#7C8BFF</color>
+    <color name="orb_idle_end">#2B37A8</color>
+    <color name="orb_busy_start">#FFC15E</color>
+    <color name="orb_busy_end">#C8760A</color>
+    <color name="orb_live_start">#3BFFC0</color>
+    <color name="orb_live_end">#00926F</color>
+    <color name="orb_fault_start">#FF7A89</color>
+    <color name="orb_fault_end">#8F1B2A</color>
+    <color name="orb_track">#1C232F</color>
+    <color name="orb_core">#0C1016</color>
+    <color name="orb_label">#7A8698</color>
+</resources>
