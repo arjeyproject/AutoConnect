@@ -32,9 +32,6 @@ no usage limit. Install it, press the dial, done.
 - **Fail closed and auto reconnect.** Keep the network blocked if the tunnel drops, or recover
   automatically.
 
-AutoConnect is a standalone Android application. It needs no server of yours, no subscription link
-and no companion service: everything it does, it does on the device.
-
 ## Install
 
 Grab the latest APK from [Releases](https://github.com/arjeyproject/AutoConnect/releases).
@@ -50,7 +47,10 @@ Android 8.0 or newer is required. Verify the download against `SHA256SUMS.txt` o
 
 ## Build it yourself
 
-On Ubuntu 22.04 or 24.04:
+**Full step by step guide, in English and Persian: [`docs/install-guide.html`](docs/install-guide.html)**
+(open it in any browser).
+
+Short version, on Ubuntu 22.04 or 24.04:
 
 ```bash
 sudo apt -y install git curl unzip zip coreutils openjdk-17-jdk
@@ -79,15 +79,9 @@ android/                  the Android application
   app/src/main/res/       design tokens, layouts, English and Persian strings
 scripts/
   fetch-android-assets.sh downloads and verifies the network cores, builds the JNI bridge
-docs/                     project page and assets
+docs/install-guide.html   bilingual build and install guide
 .github/workflows/        CI that builds, signs and publishes releases
 ```
-
-## Our other projects
-
-[@AutoVlessBot](https://t.me/AutoVlessBot) is a separate Telegram utility bot of ours. AutoConnect
-links to it from the About tab as a courtesy and nothing more: the application never contacts it and
-does not depend on it in any way.
 
 ## Support and donations
 
@@ -101,8 +95,13 @@ Support and questions: [@ArJeyDev](https://t.me/ArJeyDev) · Channel: [@ArJeyPro
 
 ## License and attribution
 
-AutoConnect is released under the **GNU General Public License v3.0**. See [LICENSE](LICENSE).
+AutoConnect is released under the **GNU Affero General Public License v3.0** (AGPL-3.0). See
+[LICENSE](LICENSE).
 
-The application is an independent interface and is not the upstream networking project. Traffic is
-carried by the open-source Aether core and the HEV Socks5 Tunnel bridge, both under GPL-3.0. Their
-notices are in [NOTICE.md](NOTICE.md) and `third-party/`.
+The reason is the copyleft of what it bundles: the Aether networking core is AGPL-3.0, so the
+combined work AutoConnect distributes has to be AGPL-3.0 as well. AGPL-3.0 section 13 also allows
+linking against GPL-3.0 components, which is what the other engines are.
+
+AutoConnect is an independent interface and is not the upstream networking project. Traffic is
+carried by the Aether core (AGPL-3.0) and the HEV Socks5 Tunnel bridge (MIT). Their notices are in
+[NOTICE.md](NOTICE.md) and `third-party/`.
