@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_picker_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/app_picker_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"
+        android:title="@string/app_picker_title"
+        android:titleTextColor="@color/text"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleCentered="true" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Field"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/app_picker_search">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/app_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:paddingHorizontal="10dp" android:paddingTop="4dp">
+        <com.google.android.material.button.MaterialButton android:id="@+id/select_all_button" style="@style/Button.Quiet" android:layout_width="wrap_content" android:text="@string/select_all" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/clear_all_button" style="@style/Button.Quiet" android:layout_width="wrap_content" android:text="@string/clear_all" android:textColor="@color/muted" />
+        <TextView android:id="@+id/selected_count" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginHorizontal="10dp" android:layout_weight="1" android:gravity="end" android:textColor="@color/muted" android:textSize="12sp" />
+    </LinearLayout>
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ListView
+            android:id="@+id/app_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@color/divider"
+            android:dividerHeight="1dp"
+            android:fastScrollEnabled="true"
+            android:paddingBottom="10dp"
+            android:scrollbarStyle="outsideOverlay" />
+        <LinearLayout android:id="@+id/app_empty" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:visibility="gone">
+            <ImageView android:layout_width="46dp" android:layout_height="46dp" android:contentDescription="@null" android:src="@drawable/ic_apps" app:tint="@color/muted" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="@string/app_picker_empty" android:textColor="@color/muted" android:textSize="14sp" />
+        </LinearLayout>
+        <ProgressBar android:id="@+id/app_loading" android:layout_width="42dp" android:layout_height="42dp" android:layout_gravity="center" android:indeterminateTint="@color/brand" />
+    </FrameLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/apply_apps_button"
+        style="@style/Button.Primary"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/app_picker_done" />
+</LinearLayout>
