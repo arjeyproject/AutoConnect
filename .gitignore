@@ -1,0 +1,32 @@
+# Android / Gradle
+android/build/
+android/app/build/
+android/.gradle/
+android/local.properties
+local.properties
+.gradle/
+build/
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Verified native payload: produced by scripts/fetch-android-assets.sh, never committed
+android/app/src/main/jniLibs/
+
+# Signing material: never commit this
+android/.android-signing/
+*.jks
+*.keystore
+signing.properties
+
+# Release output
+release/
+*.apk
+*.aab
+*.idsig
+
+# OS noise
+.DS_Store
+Thumbs.db
