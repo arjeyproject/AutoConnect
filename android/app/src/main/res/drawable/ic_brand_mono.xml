@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- AutoConnect mark: AC monogram. Tinted at call sites; also the notification and tile icon. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="24dp" android:height="24dp"
-    android:viewportWidth="48" android:viewportHeight="48">
-    <path android:fillColor="#FFFFFFFF" android:pathData="M27.6,4.8L14.9,26.1a1.1,1.1 0,0 0,0.95 1.68h6.06L19.4,42.4a1.05,1.05 0,0 0,1.9 0.8L34.2,21.9a1.1,1.1 0,0 0,-0.95 -1.68h-6.5L29.6,5.6a1.05,1.05 0,0 0,-2 -0.8z" />
-    <path android:fillColor="@android:color/transparent" android:strokeColor="#FFFFFFFF" android:strokeWidth="3.4" android:strokeLineCap="round" android:pathData="M11.4,13.6a19,19 0,0 0,0 20.8" />
-    <path android:fillColor="@android:color/transparent" android:strokeColor="#FFFFFFFF" android:strokeWidth="3.4" android:strokeLineCap="round" android:pathData="M36.6,13.6a19,19 0,0 1,0 20.8" />
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <path android:fillColor="#FFFFFFFF" android:pathData="M5.19,33.84L11.91,14.16L18.17,14.16L24.96,33.84L19.67,33.84L16.98,25.2Q16.33,23.04 15.7,20.78Q15.08,18.53 14.42,15.94L15.66,15.94Q14.99,18.53 14.37,20.78Q13.75,23.04 13.09,25.2L10.35,33.84L5.19,33.84ZM9.79,29.97L9.79,26.28L20.36,26.28L20.36,29.97L9.79,29.97ZM34.15,34.15Q31.47,34.15 29.33,32.95Q27.2,31.75 25.96,29.48Q24.73,27.21 24.73,24.01Q24.73,20.79 25.96,18.52Q27.2,16.24 29.33,15.05Q31.47,13.85 34.15,13.85Q35.95,13.85 37.47,14.38Q38.98,14.9 40.15,15.87Q41.31,16.84 42.05,18.21Q42.79,19.57 43,21.28L38.22,21.28Q38.09,20.5 37.74,19.89Q37.4,19.28 36.88,18.86Q36.37,18.44 35.7,18.21Q35.03,17.99 34.24,17.99Q32.73,17.99 31.68,18.71Q30.62,19.43 30.07,20.78Q29.51,22.12 29.51,24.01Q29.51,25.9 30.07,27.24Q30.62,28.58 31.68,29.3Q32.73,30.01 34.23,30.01Q35.03,30.01 35.69,29.8Q36.35,29.58 36.87,29.15Q37.39,28.71 37.73,28.11Q38.07,27.51 38.23,26.74L43,26.74Q42.8,28.35 42.09,29.7Q41.38,31.06 40.22,32.05Q39.06,33.05 37.53,33.6Q36,34.15 34.15,34.15Z" />
 </vector>

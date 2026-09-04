@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Long-press launcher shortcuts. -->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_connect"
+        android:shortcutId="connect"
+        android:shortcutLongLabel="@string/shortcut_connect_long"
+        android:shortcutShortLabel="@string/shortcut_connect_short">
+        <intent
+            android:action="io.github.arjeyproject.autoconnect.SHORTCUT_CONNECT"
+            android:targetClass="io.github.arjeyproject.autoconnect.MainActivity"
+            android:targetPackage="io.github.arjeyproject.autoconnect" />
+    </shortcut>
+    <shortcut
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_bot"
+        android:shortcutId="config_bot"
+        android:shortcutLongLabel="@string/shortcut_bot_long"
+        android:shortcutShortLabel="@string/shortcut_bot_short">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://t.me/AutoVlessBot" />
+    </shortcut>
+</shortcuts>
