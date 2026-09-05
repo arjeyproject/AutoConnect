@@ -32,12 +32,12 @@ jobs:
 
       - name: Test and lint
         working-directory: android
-        run: gradle --no-daemon testDebugUnitTest lintDebug
+        run: gradle --no-daemon --stacktrace testDebugUnitTest lintDebug
 
       - name: Debug build
         if: github.event_name == 'pull_request'
         working-directory: android
-        run: gradle --no-daemon assembleDebug
+        run: gradle --no-daemon --stacktrace assembleDebug
 
       - name: Decode release keystore
         id: keystore
@@ -63,17 +63,28 @@ jobs:
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: gradle --no-daemon assembleRelease bundleRelease
+        run: gradle --no-daemon --stacktrace assembleRelease bundleRelease
 
       - name: Unsigned release build
         if: ${{ github.event_name != 'pull_request' && steps.keystore.outputs.available != 'true' }}
         working-directory: android
-        run: gradle --no-daemon assembleRelease bundleRelease
+        run: gradle --no-daemon --stacktrace assembleRelease bundleRelease
 
       - name: Checksums
         if: github.event_name != 'pull_request'
         working-directory: android/app/build/outputs/apk/release
         run: sha256sum *.apk | tee SHA256SUMS.txt
+
+      - name: Collect Gradle reports
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: autoconnect-reports
+          path: |
+            android/app/build/reports/**
+            android/app/build/outputs/logs/**
+            android/app/build/test-results/**
+          if-no-files-found: ignore
 
       - uses: actions/upload-artifact@v4
         if: always()

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Long-press launcher shortcut labels. Referenced from res/xml/shortcuts.xml, which aapt2
+  compiles whether or not the manifest points at it, so these must always exist.
+-->
+<resources>
+    <string name="shortcut_connect_short">Connect</string>
+    <string name="shortcut_connect_long">Open AutoConnect</string>
+    <string name="shortcut_bot_short">AutoVless</string>
+    <string name="shortcut_bot_long">Open the AutoVless bot</string>
+</resources>

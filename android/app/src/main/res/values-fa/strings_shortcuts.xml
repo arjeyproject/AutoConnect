@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="shortcut_connect_short">اتصال</string>
+    <string name="shortcut_connect_long">باز کردن اتوکانکت</string>
+    <string name="shortcut_bot_short">AutoVless</string>
+    <string name="shortcut_bot_long">باز کردن ربات AutoVless</string>
+</resources>
